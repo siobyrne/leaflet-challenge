@@ -7,5 +7,5 @@ This project uses JSON data on earthquakes over the past day from USGS (https://
 
 * Help on the legend was acquired from (https://gis.stackexchange.com/questions/193161/add-legend-to-leaflet-map)
 
-![Screenshot of Leaflet Earthquake Map](static/images/leaflet-earthquake-map.png)
+![Screenshot of Leaflet Earthquake Map](leaflet-part-1/static/images/leaflet-earthquake-map.png)
 _Leaflet Map of USGS Earthquake Data_
