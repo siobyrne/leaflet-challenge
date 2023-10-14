@@ -10,7 +10,7 @@ d3.json(url).then(function (data) {
 
 // set marker size, mag = magnitude (strength of earthquake)
 function markerSize(mag){
-    return mag * 2500;
+    return mag * 40000;
 };
 
 // set color scale based on depth of quake
