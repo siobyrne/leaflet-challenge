@@ -49,4 +49,30 @@ function createFeatures(quakedata){
             return L.circle(location, markers)
         }
     });
+
+    // send layer to map
+    createMap(quakes);
+}
+
+function createMap(quakes){
+
+    // create base layers
+    let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+  
+    let topography = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    });
+
+    // create baseMaps
+    let baseMaps = {
+        "Street Map": street,
+        "Topographic Map": topography
+      };
+
+      // create overlay
+      let overlayMaps = {
+        "Earthquakes in the last 7 days": quakes
+      };
 }
