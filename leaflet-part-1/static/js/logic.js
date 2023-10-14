@@ -75,4 +75,35 @@ function createMap(quakes){
       let overlayMaps = {
         "Earthquakes in the last 7 days": quakes
       };
+
+      // create map and show layers
+      let myMap = L.map("map", {
+        center: [
+          37.09, -95.71
+        ],
+        zoom: 5,
+        layers: [street, quakes]
+      });
+
+      // layer control
+      L.control.layers(baseMaps, overlayMaps, {
+        collapsed: false
+      }).addTo(myMap);
+
+      // add legend
+      var legend = L.control({position: 'bottomright'});
+      legend.onAdd = function (myMap) {
+        var div = L.DomUtil.create('div', 'info legend'),
+        depth = [-10, 10, 30, 50, 60, 90];
+
+        for (var i = 0; i < depth.length; i++) {
+            div.innerHTML +=
+            
+              '<i style="background:' + markerColor(depth[i] + 1) + '"></i> ' + depth[i] + (depth[i + 1] ? '&ndash;' + depth[i + 1] + '<br>' : '+');
+          }
+          return div;
+        };
+
+        legend.addTo(myMap);
+
 }
