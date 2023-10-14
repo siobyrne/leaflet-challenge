@@ -1,3 +1,5 @@
+/* base styles */
+
 body {
   padding: 0;
   margin: 0;
@@ -9,7 +11,7 @@ html {
   height: 100%;
 }
 
-/* legend */
+/* legend styles*/
 .info {
   padding: 10px 10px;
   background: #fefffe;
@@ -22,7 +24,7 @@ html {
 }
 
 .legend i {
-  width: 20px;
+  width: 50px;
   height: 20px;
   float: right;
   margin-right: 10px;

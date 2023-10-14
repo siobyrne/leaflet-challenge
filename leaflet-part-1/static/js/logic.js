@@ -95,6 +95,7 @@ function createMap(quakes){
       legend.onAdd = function (myMap) {
         var div = L.DomUtil.create('div', 'info legend'),
         depth = [-10, 10, 30, 50, 60, 90];
+        
 
         for (var i = 0; i < depth.length; i++) {
             div.innerHTML +=
